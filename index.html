@@ -168,35 +168,6 @@
 
   <script>
 
-    document.addEventListener("DOMContentLoaded", function() {
-    const esChrome = /Chrome/i.test(navigator.userAgent) && !/Edge|OPR/i.test(navigator.userAgent);
-
-    if (!esChrome) {
-        const aviso = document.createElement("div");
-        aviso.innerHTML = `
-            <div style="
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background: rgba(0,0,0,0.85);
-                color: white;
-                text-align: center;
-                padding: 15px;
-                z-index: 9999;
-                font-size: 16px;
-                font-family: Arial, sans-serif;">
-                🚀 Para una mejor experiencia, ábrelo en <b>Google Chrome</b><br>
-                <a href="googlechrome://navigate?url=${encodeURIComponent(window.location.href)}" 
-                   style="color: #ffd700; font-weight: bold; text-decoration: underline; display: inline-block; margin-top: 8px;">
-                   Abrir en Chrome
-                </a>
-            </div>
-        `;
-        document.body.appendChild(aviso);
-    }
-});
-     
     const audio = document.getElementById("musicaFondo");
 
   // Intentar reproducir automáticamente al cargar
@@ -304,4 +275,5 @@
 
 </body>
 </html>
+
 
