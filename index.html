@@ -6,23 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fffaf0;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    font-family: 'Georgia', serif;
+    background-image: url('https://i.imgur.com/lkChSUV.jpeg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Estilo elegante similar al ejemplo */
+  .texto-elegante {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    color: #0e3f38; /* Verde suave */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+  }
+
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .texto-elegante {
+      font-size: 1.4em;
     }
+  }
     header {
-      background-color: #85b87e;
-      color: white;
-      padding: 20px 0;
-    }
+  font-family: 'Great Vibes', cursive;
+  background-color: #F8F4E3;
+  color: #D4AF37;
+  padding: 10px 0;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
     .container {
       padding: 30px;
       max-width: 900px;
       margin: auto;
     }
     /* Contador en verde oscuro */
+
     .contador {
       font-size: 1.5em;
       color: #006400; /* verde oscuro */
@@ -34,22 +61,38 @@
       color: #003300;
       font-weight: 500;
     }
-    /* Banner con imágenes a pantalla completa */
+    /* Ajuste del banner para que la imagen se vea completa */
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-size: contain; /* Imagen completa */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white; /* Fondo para márgenes laterales */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: background-image 1s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
     .banner {
-      height: 100vh;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-      font-size: 2.5em;
-      font-weight: bold;
-      transition: background-image 1s ease-in-out;
+      height: 70vh;
+      font-size: 1.5em;
+      padding: 10px;
     }
+  }
+
+  @media (max-width: 480px) {
+    .banner {
+      height: 60vh;
+      font-size: 1.2em;
+    }
+  }
     iframe {
       border: none;
       width: 100%;
@@ -127,14 +170,22 @@
 
   <header>
     <h1>Génesis & Israel</h1>
-    <h2>¡Nos Casamos!</h2>
   </header>
+ 
+  </div>
+  <p class="texto-elegante">¡Nos Casamos!</p>
+  </div>
 
   <div class="container">
     <div class="contador" id="diasFaltantes"></div>
-    <p>Tenemos el honor de invitarte a celebrar con nosotros este momento tan especial.</p>
-    <p>Rodeados de nuestra familia, amigos y mucho amor.</p> 
   </div>
+
+   <!-- Texto con fondo floral degradado -->
+  <div>
+  <p class="texto-elegante">Con la bendición de Dios y compañia de nuestros padres.</p>
+  <p class="texto-elegante">Tenemos el honor de invitarte a celebrar con nosotros este momento tan especial.</p>
+  <p class="texto-elegante">Rodeados de nuestra familia, amigos y mucho amor.</p> 
+</div>
 
   <!-- Música de fondo -->
   <audio id="musicaFondo" controls loop autoplay preload="auto" playsinline>
@@ -147,11 +198,17 @@
     <!-- El texto se inyecta dinámicamente -->
   </div>
 
+  <div>
+  <p class="texto-elegante">Viernes, 26 de Diciembre del 2025</p>
+  <p class="texto-elegante">3:00 pm</p>
+  <p class="texto-elegante">Salón Jardín La Estampida, Tuxtla Gutiérrez, Chiapas</p>
+</div>
+
+<!-- Fuente externa para la tipografía -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
   <!-- Mapa de ubicación -->
   <div class="container">
-    <p>Viernes, 26 de Diciembre del 2025</p>
-    <p>3:00 pm</p>
-    <p>Salón Jardín La Estampida, Tuxtla Gutiérrez, Chiapas</p>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.313070109201!2d-93.2063288!3d16.7775801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdb5e79f8439d%3A0x7087b497be85bcb8!2sLa%20Estampida%20Sal%C3%B3n%20Jard%C3%ADn!5e0!3m2!1ses-419!2smx!4v1693790999999!5m2!1ses-419!2smx" 
       allowfullscreen="" loading="lazy">
