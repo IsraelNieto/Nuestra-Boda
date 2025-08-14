@@ -6,173 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-  font-family: 'Georgia', serif;
-  position: relative;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  text-align: center; /* Centra horizontalmente */
-}
-
-/* Imagen de fondo */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://i.imgur.com/IsnlxSu.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-/* Asegura que los bloques principales estén centrados */
-.container, 
-header, 
-.confirmacion, 
-.texto-elegante {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Móviles */
-@media (max-width: 768px) {
-  body::before {
-    background-size: cover;
-    background-attachment: scroll;
-  }
-}
-  
-  /* Estilo elegante similar al ejemplo */
-  .texto-elegante {
-    font-family: 'Georgia', serif;
-    font-size: 1.8em;
-    color: #0e3f38; /* Verde suave */
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    margin: 10px 0;
-  }
-
-  /* Ajustes para pantallas pequeñas */
-  @media (max-width: 768px) {
+      font-family: 'Georgia', serif;
+      position: relative;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.imgur.com/IsnlxSu.jpeg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    .container, header, .confirmacion, .texto-elegante {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 768px) {
+      body::before {
+        background-size: cover;
+        background-attachment: scroll;
+      }
+    }
     .texto-elegante {
-      font-size: 1.4em;
+      font-family: 'Georgia', serif;
+      font-size: 1.8em;
+      color: #0e3f38;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      margin: 10px 0;
     }
-  }
-
-    .texto-elegante2 {
-    font-family: 'Georgia', serif;
-    font-size: 1.8em;
-    color: #0e3f38; /* Verde suave */
-    font-weight: normal;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    margin: 10px 0;
-  }
-
-    /* Ajustes para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .texto-elegante2 {
-      font-size: 1.4em;
+    @media (max-width: 768px) {
+      .texto-elegante { font-size: 1.4em; }
     }
-  }
+    .texto-elegante2 {
+      font-family: 'Georgia', serif;
+      font-size: 1.8em;
+      color: #0e3f38;
+      font-weight: normal;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      margin: 10px 0;
+    }
+    @media (max-width: 768px) {
+      .texto-elegante2 { font-size: 1.4em; }
+    }
     header {
-  font-family: 'Great Vibes', cursive;
-  background-color: #F8F4E3;
-  color: #D4AF37;
-  padding: 10px 0;
-  font-size: 45px;
-  text-align: center;
-  letter-spacing: 2px;
-  
-}
-/*text-shadow: 1px 1px 2px rgba(0,0,0,0.3);*/
-    .container {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
+      font-family: 'Great Vibes', cursive;
+      background-color: #F8F4E3;
+      color: #D4AF37;
+      padding: 10px 0;
+      font-size: 45px;
+      text-align: center;
+      letter-spacing: 2px;
     }
-    /* Contador en verde oscuro */
-
+    .container { padding: 30px; max-width: 900px; margin: auto; }
     .contador {
       font-size: 1.5em;
-      color: #006400; /* verde oscuro */
+      color: #006400;
       margin: 20px 0;
       font-weight: bold;
     }
-    /* Texto invitacion en verde oscuro casi negro */
     .container p {
       color: #003300;
       font-weight: 500;
     }
-    /* Ajuste del banner para que la imagen se vea completa */
-    /*background-color: white;  Fondo para márgenes laterales */
-  .banner {
-    width: 100%;
-    height: 300px;
-    background-size: cover; /* Imagen completa */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('https://i.imgur.com/eGOXVDF.jpeg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    font-size: 2.5em;
-    font-weight: bold;
-    transition: background-image 1s ease-in-out;
-  }
-
-  @media (max-width: 768px) {
     .banner {
-      height: 70vh;
-      font-size: 1.5em;
-      padding: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .banner {
-      height: 60vh;
-      font-size: 1.2em;
-    }
-  }
-    iframe {
-      border: none;
       width: 100%;
-      height: 400px;
-      margin-top: 30px;
-      border-radius: 10px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('https://i.imgur.com/eGOXVDF.jpeg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      font-size: 2.5em;
+      font-weight: bold;
+      transition: background-image 1s ease-in-out;
     }
+    @media (max-width: 768px) {
+      .banner { height: 70vh; font-size: 1.5em; padding: 10px; }
+    }
+    @media (max-width: 480px) {
+      .banner { height: 60vh; font-size: 1.2em; }
+    }
+    iframe { border: none; width: 100%; height: 400px; margin-top: 30px; border-radius: 10px; }
     form {
-      margin-top: 40px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 40px; padding: 20px; background: #ffffff;
+      border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     input, textarea, button {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 1em;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      width: 90%; padding: 10px; margin: 10px 0;
+      font-size: 1em; border-radius: 5px; border: 1px solid #ccc;
     }
     button {
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      cursor: pointer;
+      background-color: #d4af37; color: white;
+      border: none; cursor: pointer;
     }
-    audio {
-      margin-top: 20px;
-    }
-
+    audio { margin-top: 20px; }
     .confirmacion {
       padding: 40px 20px;
       background: #F8F4E3;
@@ -180,40 +122,24 @@ header,
     }
     .confirmacion h2 {
       font-family: 'Great Vibes', cursive;
-      color: #D4AF37; /* texto en blanco */
+      color: #D4AF37;
       font-size: 40px;
     }
     .confirmacion form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center; /* centra todos los elementos del formulario */
+      max-width: 500px; margin: auto;
+      display: flex; flex-direction: column; gap: 15px; align-items: center;
     }
-    .confirmacion input,
-    .confirmacion textarea {
-      width: 100%;            /* campos al 100% del contenedor */
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1em;
+    .confirmacion input, .confirmacion textarea {
+      width: 100%; padding: 10px; border: 1px solid #ccc;
+      border-radius: 10px; font-size: 1em;
     }
     .confirmacion button {
-      width: auto;            /* botón ajustado a su contenido */
-      padding: 12px 20px;
-      background-color: #25d366;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1.1em;
-      align-self: center;     /* asegura el centrado del botón */
+      width: auto; padding: 12px 20px; background-color: #25d366;
+      color: white; font-weight: bold; border: none;
+      border-radius: 10px; cursor: pointer; font-size: 1.1em;
+      align-self: center;
     }
-    .confirmacion button:hover {
-      background-color: #1ebe5d;
-    }
+    .confirmacion button:hover { background-color: #1ebe5d; }
   </style>
 </head>
 <body>
@@ -222,50 +148,42 @@ header,
       <h1>Génesis & Israel</h1>
   </header>
  
-  </div>
   <p class="texto-elegante">¡Nos Casamos!</p>
-  </div>
 
   <div class="container">
     <div class="contador" id="diasFaltantes"></div>
   </div>
 
-   <!-- Texto con fondo floral degradado -->
   <div>
-  <p class="texto-elegante2">Con la bendición de Dios y compañía de nuestros padres e hija.</p>
-  <p class="texto-elegante2">Tenemos el honor de invitarte a celebrar con nosotros este momento tan especial.</p>
-  <p class="texto-elegante2">Rodeados de nuestra familia, amigos y mucho amor.</p> 
-</div>
+    <p class="texto-elegante2">Con la bendición de Dios y compañía de nuestros padres e hija.</p>
+    <p class="texto-elegante2">Tenemos el honor de invitarte a celebrar con nosotros este momento tan especial.</p>
+    <p class="texto-elegante2">Rodeados de nuestra familia, amigos y mucho amor.</p> 
+  </div>
 
-  <!-- Música de fondo -->
+  <!-- Pase para invitados -->
+  <div id="pase-container" style="text-align:center; margin:20px auto; font-size:1.5em; font-weight:bold; background:#fff3e6; padding:10px 20px; border-radius:8px; max-width:300px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+    Pase para 2 personas
+  </div>
+
   <audio id="musicaFondo" controls loop autoplay preload="auto" playsinline>
     <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
     Tu navegador no soporta el audio.
   </audio>
 
-  <!-- Banner con fondo dinámico -->
-  <div class="banner" id="bannerTexto">
-    <!-- El texto se inyecta dinámicamente -->
-  </div>
+  <div class="banner" id="bannerTexto"></div>
 
   <div>
-  <p class="texto-elegante">Viernes, 26 de Diciembre del 2025</p>
-  <p class="texto-elegante">3:00 pm</p>
-  <p class="texto-elegante">Salón Jardín La Estampida, Tuxtla Gutiérrez, Chiapas</p>
-</div>
-
-<!-- Fuente externa para la tipografía -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <!-- Mapa de ubicación -->
-  <div class="container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.313070109201!2d-93.2063288!3d16.7775801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdb5e79f8439d%3A0x7087b497be85bcb8!2sLa%20Estampida%20Sal%C3%B3n%20Jard%C3%ADn!5e0!3m2!1ses-419!2smx!4v1693790999999!5m2!1ses-419!2smx" 
-      allowfullscreen="" loading="lazy">
-    </iframe>
+    <p class="texto-elegante">Viernes, 26 de Diciembre del 2025</p>
+    <p class="texto-elegante">3:00 pm</p>
+    <p class="texto-elegante">Salón Jardín La Estampida, Tuxtla Gutiérrez, Chiapas</p>
   </div>
 
-  <!-- Confirmación de asistencia -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.313070109201!2d-93.2063288!3d16.7775801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecdb5e79f8439d%3A0x7087b497be85bcb8!2sLa%20Estampida%20Sal%C3%B3n%20Jard%C3%ADn!5e0!3m2!1ses-419!2smx!4v1693790999999!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
   <section class="confirmacion">
     <h2>Acompáñanos en este día tan especial</h2>
     <h2>"Las Almas que se encuentran y se réconocen, nunca se sueltan."</h2>
@@ -278,27 +196,20 @@ header,
   </section>
 
   <script>
-    // ====== Música con autoplay robusto ======
     const audio = document.getElementById("musicaFondo");
-
     function habilitarAudioPorInteraccion() {
       const iniciar = () => {
-        audio.muted = false; // por si algún navegador lo marca silenciado
+        audio.muted = false;
         audio.play().catch(() => {});
       };
       document.addEventListener('pointerdown', iniciar, { once: true });
       document.addEventListener('keydown', iniciar, { once: true });
     }
-
     window.addEventListener("load", () => {
-      audio.play().catch(() => {
-        console.warn("El navegador bloqueó el autoplay. Se habilitará al primer toque/tecla.");
-        habilitarAudioPorInteraccion();
-      });
+      audio.play().catch(() => { habilitarAudioPorInteraccion(); });
     });
 
-    // ====== Contador de días ======
-    const fechaBoda = new Date(2025, 11, 26); // 26 diciembre 2025
+    const fechaBoda = new Date(2025, 11, 26);
     const hoy = new Date();
     fechaBoda.setHours(0, 0, 0, 0);
     hoy.setHours(0, 0, 0, 0);
@@ -311,29 +222,25 @@ header,
       : "¡La boda ya ocurrió, gracias por acompañarnos! ❤️";
     document.getElementById("diasFaltantes").innerText = mensajeContador;
 
-    // ====== Slideshow de fondos ======
     const imagenes = [
-      'https://i.imgur.com/Erw5g7C.jpeg',//1
-      'https://i.imgur.com/f2XZXsR.jpeg',//1.5
-      'https://i.imgur.com/l2wahJM.jpeg',//2
-      'https://i.imgur.com/v5qagHx.jpeg',//3
-      //'https://i.imgur.com/ES1P7fX.jpeg',//4
-      'https://i.imgur.com/64TVkpj.jpeg',//9
-      'https://i.imgur.com/XaQR3WP.jpeg',//10
-      'https://i.imgur.com/eff9g1a.jpeg',//11
-      //'https://i.imgur.com/l1XuUJf.jpeg',//12
-      'https://i.imgur.com/MFWDHvE.jpeg',//17.1
-      'https://i.imgur.com/28UaMUj.jpeg',//17.2
-      'https://i.imgur.com/jIzjZ5x.jpeg',//16
-      'https://i.imgur.com/DeibOIn.jpeg',//17
-      'https://i.imgur.com/mC0RhYI.jpeg',//17.3
-      'https://i.imgur.com/t5jfyKl.jpeg',//15 primer año
-      'https://i.imgur.com/ea9YMOJ.jpeg',//14 navidad
-      'https://i.imgur.com/oDDxaQh.jpeg',//13
+      'https://i.imgur.com/Erw5g7C.jpeg',
+      'https://i.imgur.com/f2XZXsR.jpeg',
+      'https://i.imgur.com/l2wahJM.jpeg',
+      'https://i.imgur.com/v5qagHx.jpeg',
+      'https://i.imgur.com/64TVkpj.jpeg',
+      'https://i.imgur.com/XaQR3WP.jpeg',
+      'https://i.imgur.com/eff9g1a.jpeg',
+      'https://i.imgur.com/MFWDHvE.jpeg',
+      'https://i.imgur.com/28UaMUj.jpeg',
+      'https://i.imgur.com/jIzjZ5x.jpeg',
+      'https://i.imgur.com/DeibOIn.jpeg',
+      'https://i.imgur.com/mC0RhYI.jpeg',
+      'https://i.imgur.com/t5jfyKl.jpeg',
+      'https://i.imgur.com/ea9YMOJ.jpeg',
+      'https://i.imgur.com/oDDxaQh.jpeg',
       'https://i.imgur.com/6Xzi3EW.jpeg',
-      'https://i.imgur.com/Zyp0Bh3.jpeg'//18 Fin
+      'https://i.imgur.com/Zyp0Bh3.jpeg'
     ];
-
     const textos = [
       'Nuestro amor', 
       'Nuestra historia',
@@ -341,49 +248,33 @@ header,
       '¡Cada momento cuenta!',
       '¡Prepárate para el gran día!'
     ];
-
     let indice = 0;
     const banner = document.getElementById('bannerTexto');
-
     function cambiarFondo() {
       banner.style.backgroundImage = `url('${imagenes[indice]}')`;
-
-      // Si hay texto disponible en la misma posición, lo muestra; si no, no muestra nada
-      if (textos[indice] && textos[indice].trim() !== "") {
-        banner.innerText = textos[indice];
-      } else {
-        banner.innerText = ""; // No muestra nada si está vacío
-      }
-
+      banner.innerText = textos[indice] || "";
       indice = (indice + 1) % imagenes.length;
     }
+    cambiarFondo();
+    setInterval(cambiarFondo, 5000);
 
-    cambiarFondo(); // inicial
-    setInterval(cambiarFondo, 5000); // cada 5 segundos
+    // Pase dinámico
+    const paseParams = new URLSearchParams(window.location.search);
+    const numPersonas = paseParams.get('pase') || '2';
+    document.getElementById('pase-container').innerText = `Pase para ${numPersonas} persona${numPersonas > 1 ? 's' : ''}`;
 
-    // ====== Enviar confirmación por WhatsApp ======
     function enviarConfirmacionWhatsApp(e) {
       e.preventDefault();
-
       const nombre = document.getElementById("nombre").value.trim();
       const mensaje = document.getElementById("mensaje").value.trim();
-
-      const numeroDestino1 = "529611816238"; // <-- REEMPLAZA ESTE NÚMERO
-      const numeroDestino2 = "5611592742";   // <-- REEMPLAZA ESTE NÚMERO
-
+      const numeroDestino1 = "529611816238";
+      const numeroDestino2 = "5611592742";
       const texto = `Hola, ${nombre}, confirmo(s) la asistencia a la boda.${mensaje ? "\n" + mensaje : ""}`;
-
       const url1 = `https://wa.me/${numeroDestino1}?text=${encodeURIComponent(texto)}`;
       const url2 = `https://wa.me/${numeroDestino2}?text=${encodeURIComponent(texto)}`;
-
       window.open(url1, '_blank');
       window.open(url2, '_blank');
-
-      document.getElementById("respuesta").innerHTML = `
-        ¡Gracias ${nombre}! Tu confirmación fue enviada.<br>
-        También puedes notificar a otro contacto <a href="${url2}" target="_blank">aquí</a>.
-      `;
-
+      document.getElementById("respuesta").innerHTML = `¡Gracias ${nombre}! Tu confirmación fue enviada.<br>También puedes notificar a otro contacto <a href="${url2}" target="_blank">aquí</a>.`;
       document.getElementById("nombre").value = '';
       document.getElementById("mensaje").value = '';
     }
@@ -391,15 +282,3 @@ header,
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
